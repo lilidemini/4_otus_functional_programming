@@ -6,7 +6,7 @@ def foo(x, y):
     return x * y
 
 
-r = range(1, 5)
+r = range(5, 10)
 
 res = functools.reduce(foo, r)
 

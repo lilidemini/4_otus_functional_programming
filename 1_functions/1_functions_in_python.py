@@ -1,54 +1,51 @@
 import inspect
 
-fun_lambda = lambda x, y: x ** 2 + y ** 2
-
-print(fun_lambda(2, 2))
+print("Функци является объектом")
 
 
-def fun():
-    print('_function_')
+def hello_function(b):
+    a = 1
+
+
+# print(dir(hello_function))
+# print("name:", hello_function.__name__)
+# print("code:", hello_function.__code__)
+# print("type:", type(hello_function))
+# print(inspect.getsource(hello_function))
+
+print("Возвращаемые значения из функций")
+def fun(n=None):
+    print('_function_' + str(n))
 
 
 def fun_return():
     return '_function_'
 
 
-# ? ? ?
 # print(fun())
+# print(fun_return())
 
-print('# ' * 30)
-
-print(type(fun))
-
-print(dir(fun))
-
-print(fun.__name__)
-
-print(fun.__code__)
-
-print(inspect.getsource(fun))
-
-print('# ' * 30)
+print("Можем использовать функцию как любой другой объект")
 
 list_of_functions = [fun, fun, fun]
 
-print(list_of_functions)
+# print(list_of_functions)
 
-for f in list_of_functions:
-    f()
+for function in list_of_functions:
+    function(1)
 
-print('# ' * 30)
-
-a = fun
-
-a()
-
-print('# ' * 30)
+print("Присваиваем функцию переменной")
+another_name = fun
+another_name()
 
 
+print("Возвращаем функцию из функции")
 def foo(f): return f
+foo(fun)()
 
 
-foo(foo(fun))()
-
-print('# ' * 30)
+print("Функция без имени - lambda")
+lambda_function = lambda x: x ** 2
+lambda_function(10)
+result = (lambda x: x ** 2)(10)
+print(result)

@@ -1,4 +1,5 @@
 def make_cool(foo):
+
     def wrapper():
         return "---= " + str(foo()) + " =---"
 

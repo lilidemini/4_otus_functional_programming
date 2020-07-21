@@ -1,4 +1,5 @@
 def mul(times):
+
     def wrapper(x):
         print("{times} times {x} is".format(times=times, x=x), end=" ")
         return times * x

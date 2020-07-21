@@ -1,5 +1,6 @@
 a = 1
 
+# # example 1
 # def change():
 #     a = a + 5
 #     print(a)
@@ -7,16 +8,17 @@ a = 1
 # change()
 
 
+# # example 2
 # def change():
 #     global a
 #     a = a + 5
 #     print(a)
 #
 # change()
-#
-# print(a)
+# print("After calling change a =", a)
 
 
+# # example 3
 # def change():
 #     a = 10
 #
@@ -25,12 +27,12 @@ a = 1
 #         # global a - ?
 #         a = a + 5
 #
-#     print("before inside", a)
+#     print("before inside a =", a)
 #
 #     change_inside()
 #
-#     print("after inside", a)
+#     print("after inside a =", a)
 #
 # change()
 #
-# print("outside", a)
+# print("outside a =", a)
