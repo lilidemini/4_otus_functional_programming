@@ -6,8 +6,8 @@ def foo(x, y):
     return x * y
 
 
-r = range(5, 10)
+some_range = range(3, 10)
 
-res = functools.reduce(foo, r)
+result = functools.reduce(foo, some_range)
 
-print(res)
+print("result:", result)

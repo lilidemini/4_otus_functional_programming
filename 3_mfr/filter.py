@@ -7,7 +7,7 @@ def is_digit(x):
 
 s = [None, [], "2", 2, 1.0, int, str, "B", "b"]
 
-# Применение lambda функций
+# Применение lambda функций так же возможно
 filtered_s = filter(is_digit, s)
 
 print(list(filtered_s))

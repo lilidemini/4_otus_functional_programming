@@ -1,51 +1,50 @@
 import inspect
 
-print("Функци является объектом")
+
+# Объявление функции
+def base_function():
+    pass
 
 
-def hello_function(b):
-    a = 1
+def advanced_function(arg):  # Имя функции
+    return arg  # Тело функции
 
 
-# print(dir(hello_function))
-# print("name:", hello_function.__name__)
-# print("code:", hello_function.__code__)
-# print("type:", type(hello_function))
-# print(inspect.getsource(hello_function))
-
-print("Возвращаемые значения из функций")
-def fun(n=None):
-    print('_function_' + str(n))
+# Сигнатура функции - в общем понимании это совокупность имени,
+# кол-ва и порядка аргументов, возвращаемого значения.
 
 
-def fun_return():
-    return '_function_'
+print("=== Функция является объектом ===")
+print(dir(advanced_function))
+print("name:", advanced_function.__name__)
+print("code:", advanced_function.__code__)
+print("type:", type(advanced_function))
 
 
-# print(fun())
-# print(fun_return())
+print("=== Использование функции как объекта первого класса ===")
+# Хранить в структурах данных
+my_functions = [base_function, advanced_function, 10, None]
+print(my_functions)
 
-print("Можем использовать функцию как любой другой объект")
+# Присваивать переменным
+my_arg = advanced_function
+my_arg(10)
 
-list_of_functions = [fun, fun, fun]
+# Передавать в качестве аргумента другим функциям
+advanced_function(base_function)
 
-# print(list_of_functions)
+# Возвращать из функций
+result = advanced_function(base_function)
+result()
 
-for function in list_of_functions:
-    function(1)
+# Вызов при возвращении
+advanced_function(base_function)()
 
-print("Присваиваем функцию переменной")
-another_name = fun
-another_name()
-
-
-print("Возвращаем функцию из функции")
-def foo(f): return f
-foo(fun)()
+print("=== Возвращаемые значения ===")
+def example1():
+    print('example1')
 
 
-print("Функция без имени - lambda")
-lambda_function = lambda x: x ** 2
-lambda_function(10)
-result = (lambda x: x ** 2)(10)
-print(result)
+def example2():
+    return "example2"
+
