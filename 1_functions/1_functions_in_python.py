@@ -3,23 +3,21 @@ import inspect
 
 # Объявление функции
 def base_function():
-    pass
+    pass  # Тело функции
 
 
 def advanced_function(arg):  # Имя функции
-    return arg  # Тело функции
+    """ Докстринга функции """
+    return arg  # Возвращаемое значение
 
 
-# Сигнатура функции - в общем понимании это совокупность имени,
-# кол-ва и порядка аргументов, возвращаемого значения.
-
+# Сигнатура функции - в общем понимании это совокупность имени, кол-ва и порядка аргументов, возвращаемого значения.
 
 print("=== Функция является объектом ===")
 print(dir(advanced_function))
 print("name:", advanced_function.__name__)
 print("code:", advanced_function.__code__)
 print("type:", type(advanced_function))
-
 
 print("=== Использование функции как объекта первого класса ===")
 # Хранить в структурах данных
@@ -41,10 +39,11 @@ result()
 advanced_function(base_function)()
 
 print("=== Возвращаемые значения ===")
+
+
 def example1():
     print('example1')
 
 
 def example2():
     return "example2"
-
