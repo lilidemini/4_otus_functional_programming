@@ -1,12 +1,12 @@
-def make_cool(foo):
+def some_stuff(func):
 
-    def wrapper():
-        return "---= " + str(foo()) + " =---"
+    def new():
+        print("-------------")
 
-    return wrapper
+    return new
 
 
-@make_cool
+@some_stuff
 def say_hello():
     return "hello"
 

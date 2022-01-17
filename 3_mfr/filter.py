@@ -5,9 +5,13 @@ def is_digit(x):
     # return isinstance(x, object)
 
 
-s = [None, [], "2", 2, 1.0, int, str, "B", "b"]
+s_list = [None, [], "2", 2, 1.0, int, str, "B", "b"]
 
 # Применение lambda функций так же возможно
-filtered_s = filter(is_digit, s)
+filtered_s = filter(lambda item: str(item).isnumeric(), s_list)
 
-print(list(filtered_s))
+filtered = []
+for el in s_list:
+    if is_digit(el):
+        filtered.append(el)
+print(filtered)

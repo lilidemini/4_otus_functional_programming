@@ -17,6 +17,7 @@ print("=== Функция является объектом ===")
 print(dir(advanced_function))
 print("name:", advanced_function.__name__)
 print("code:", advanced_function.__code__)
+print("code:", advanced_function.__doc__)
 print("type:", type(advanced_function))
 
 print("=== Использование функции как объекта первого класса ===")
