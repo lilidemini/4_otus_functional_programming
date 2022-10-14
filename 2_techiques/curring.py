@@ -6,6 +6,8 @@ from functools import partial
 
 def money_transfer(client_from, client_to, amount, currency, pay_system):
     print(f"Transfer from: {client_from} to: {client_to} made for {amount} {currency} with {pay_system}")
+
+
 MAX_AMOUNT = 150000
 
 

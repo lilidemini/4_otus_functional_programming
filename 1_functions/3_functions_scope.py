@@ -1,9 +1,11 @@
 A = 1
 
+
 # example 1
 def change():
     A = A + 5
     print(A)
+
 
 change()
 
@@ -13,6 +15,7 @@ def change():
     global A
     A = A + 5
     print(A)
+
 
 change()
 

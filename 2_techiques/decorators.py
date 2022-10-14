@@ -1,5 +1,4 @@
 def some_stuff(func):
-
     def new():
         print("-------------")
 

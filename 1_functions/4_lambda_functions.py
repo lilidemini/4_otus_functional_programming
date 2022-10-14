@@ -10,11 +10,13 @@ names = [
     "Майк Тайсон"
 ]
 
+
 # 1. Сортируем по имени
 # 2. Сортируем по фамилии
 
 def get_surname(name):
     return name.split(" ")[1]
+
 
 sorted_names = sorted(names, key=get_surname)
 
