@@ -1,8 +1,5 @@
-a = input("Input number a: ")
-b = input("Input number b: ")
-
-a = int(a)
-b = int(b)
+a = int(input("Input number a: "))
+b = int(input("Input number b: "))
 
 action = input("Input action [+, -, /, *]: ")
 

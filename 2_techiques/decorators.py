@@ -1,13 +1,18 @@
-def some_stuff(func):
-    def new():
-        print("-------------")
+def make_nickname_cool(func):
 
-    return new
+    def wrapped():
+        return f"------[{func()}]-------"
+
+    return wrapped
+
+# с декоратором
+# @make_nickname_cool
+def my_nickname():
+    return 'Lilia'
+
+print(my_nickname()) # -----[Lilia]-------
 
 
-@some_stuff
-def say_hello():
-    return "hello"
-
-
-print(say_hello())
+# то же самое без  декоратора (закоментить строку с собачкой)
+my_nickname = make_nickname_cool(my_nickname)
+print(my_nickname()) # ------[Lilia]-------

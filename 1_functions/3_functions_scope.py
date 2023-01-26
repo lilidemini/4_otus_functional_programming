@@ -1,22 +1,20 @@
-A = 1
+# Константы - неизменяемые переменные, объявляются верхним регистром в глобальных переменных
+ARGUMENT_CONSTANTA = 1
 
-
-# example 1
 def change():
-    A = A + 5
-    print(A)
+    """"некорректная функция, изменяющая константу, в результате ошибка"""
+    ARGUMENT_CONSTANTA = ARGUMENT_CONSTANTA + 5
+    print(ARGUMENT_CONSTANTA) # UnboundLocalError: local variable 'A' referenced before assignment
 
-
-change()
+# change()
 
 
 # example 2
 def change():
-    global A
-    A = A + 5
-    print(A)
+    """"функция изменит константу"""
+    global ARGUMENT_CONSTANTA
+    ARGUMENT_CONSTANTA = ARGUMENT_CONSTANTA + 5
+    print(ARGUMENT_CONSTANTA)
 
-
-change()
-
-print("After calling change() GLOBAL_A =", A)
+change() # 6
+print("After calling change() GLOBAL_A =", ARGUMENT_CONSTANTA)

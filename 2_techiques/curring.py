@@ -11,7 +11,7 @@ def money_transfer(client_from, client_to, amount, currency, pay_system):
 MAX_AMOUNT = 150000
 
 
-# Мы можем сделать так
+# передать изменяемую часть аргументов в функцию, а аргументы с неизменными значениями передать в return
 def ruble_visa_transfer_for_test(client_from, client_to):
     return money_transfer(client_from, client_to, 0.1, "RUB", "VISA")
 
